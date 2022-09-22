@@ -60,12 +60,12 @@ summary(penguins)
     ##  NA's   :2         NA's   :2
 
 ``` r
-# There are 8 variable in the table: species, island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex and year
-# The penguins data sheet has 344 row and 8 column
-# The mean of flipper length is 200.9 mm
+# There are 8 variable in the table: species, island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex and year.
+# The penguins data sheet has 344 row and 8 column.
+# The mean of flipper length is 200.9 mm.
 
 
-# The scatterplot 
+# The scatterplot:
 ggplot(penguins, aes(x= bill_length_mm, y=flipper_length_mm)) + geom_point(aes(color=species))
 ```
 
@@ -103,12 +103,13 @@ ggsave
     ##     grid.draw(plot)
     ##     invisible(filename)
     ## }
-    ## <bytecode: 0x7f8b02cb5010>
+    ## <bytecode: 0x7fa81c55d498>
     ## <environment: namespace:ggplot2>
 
 \#Problem 2
 
 ``` r
+# Create the data frame.
 df = tibble(
   RS = rnorm(10),
   logical = RS > 0,
@@ -121,41 +122,24 @@ df
     ## # A tibble: 10 × 4
     ##         RS logical C     L    
     ##      <dbl> <lgl>   <chr> <fct>
-    ##  1  0.400  TRUE    1     A    
-    ##  2 -1.34   FALSE   2     B    
-    ##  3 -0.0894 FALSE   3     C    
-    ##  4  0.498  TRUE    4     A    
-    ##  5 -1.43   FALSE   5     A    
-    ##  6  0.823  TRUE    6     B    
-    ##  7 -0.578  FALSE   7     C    
-    ##  8  0.244  TRUE    8     A    
-    ##  9  1.42   TRUE    9     B    
-    ## 10  0.443  TRUE    10    C
+    ##  1 -0.393  FALSE   1     A    
+    ##  2 -0.762  FALSE   2     B    
+    ##  3 -2.76   FALSE   3     C    
+    ##  4 -0.744  FALSE   4     A    
+    ##  5  0.0212 TRUE    5     A    
+    ##  6  1.56   TRUE    6     B    
+    ##  7 -0.251  FALSE   7     C    
+    ##  8 -0.0300 FALSE   8     A    
+    ##  9 -1.30   FALSE   9     B    
+    ## 10  0.121  TRUE    10    C
 
 ``` r
-# The RS variable has the mean of around 0.307
+# The RS variable has the mean of around 0.307.
 mean(as.numeric(df$RS))
-```
-
-    ## [1] 0.03875425
-
-``` r
-# The logical variable has the mean of 0.6
+# The logical variable has the mean of 0.6.
 mean(as.numeric(df$logical))
-```
-
-    ## [1] 0.6
-
-``` r
-# The C variable has the mean of 5.5
+# The C variable has the mean of 5.5.
 mean(as.numeric(df$C))
-```
-
-    ## [1] 5.5
-
-``` r
-# The L variable has the mean of 1.9
+# The L variable has the mean of 1.9.
 mean(as.numeric(df$L))
 ```
-
-    ## [1] 1.9
