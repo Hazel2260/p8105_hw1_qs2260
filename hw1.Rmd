@@ -12,16 +12,17 @@ library(ggplot2)
 ```{r}
 data("penguins", package = "palmerpenguins")
 ```
-#Problem 1
-```{r}
-view(penguins)
-nrow(penguins)
-ncol(penguins)
-summary(penguins)
-# There are 8 variable in the table: species, island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex and year.
-# The penguins data sheet has 344 row and 8 column.
-# The mean of flipper length is 200.9 mm.
 
+#Problem 1
+view(penguins)
+
+The 8 variables in the table are: `r names(penguins)`.
+
+The penguins data sheet has `r nrow(penguins)` row and `r ncol(penguins)` column.
+
+The mean of flipper length is `r mean(penguins$flipper_length_mm, na.rm = TRUE)`.
+
+```{r}
 
 # The scatterplot:
 ggplot(penguins, aes(x= bill_length_mm, y=flipper_length_mm)) + geom_point(aes(color=species))

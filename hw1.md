@@ -23,48 +23,16 @@ library(ggplot2)
 data("penguins", package = "palmerpenguins")
 ```
 
-\#Problem 1
+\#Problem 1 view(penguins)
+
+The 8 variables in the table are: species, island, bill_length_mm,
+bill_depth_mm, flipper_length_mm, body_mass_g, sex, year.
+
+The penguins data sheet has 344 row and 8 column.
+
+The mean of flipper length is 200.9152047.
 
 ``` r
-view(penguins)
-nrow(penguins)
-```
-
-    ## [1] 344
-
-``` r
-ncol(penguins)
-```
-
-    ## [1] 8
-
-``` r
-summary(penguins)
-```
-
-    ##       species          island    bill_length_mm  bill_depth_mm  
-    ##  Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
-    ##  Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  
-    ##  Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  
-    ##                                  Mean   :43.92   Mean   :17.15  
-    ##                                  3rd Qu.:48.50   3rd Qu.:18.70  
-    ##                                  Max.   :59.60   Max.   :21.50  
-    ##                                  NA's   :2       NA's   :2      
-    ##  flipper_length_mm  body_mass_g       sex           year     
-    ##  Min.   :172.0     Min.   :2700   female:165   Min.   :2007  
-    ##  1st Qu.:190.0     1st Qu.:3550   male  :168   1st Qu.:2007  
-    ##  Median :197.0     Median :4050   NA's  : 11   Median :2008  
-    ##  Mean   :200.9     Mean   :4202                Mean   :2008  
-    ##  3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  
-    ##  Max.   :231.0     Max.   :6300                Max.   :2009  
-    ##  NA's   :2         NA's   :2
-
-``` r
-# There are 8 variable in the table: species, island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex and year.
-# The penguins data sheet has 344 row and 8 column.
-# The mean of flipper length is 200.9 mm.
-
-
 # The scatterplot:
 ggplot(penguins, aes(x= bill_length_mm, y=flipper_length_mm)) + geom_point(aes(color=species))
 ```
@@ -103,7 +71,7 @@ ggsave
     ##     grid.draw(plot)
     ##     invisible(filename)
     ## }
-    ## <bytecode: 0x7fa81c55d498>
+    ## <bytecode: 0x7fdfa1756320>
     ## <environment: namespace:ggplot2>
 
 \#Problem 2
@@ -120,18 +88,18 @@ df
 ```
 
     ## # A tibble: 10 × 4
-    ##         RS logical C     L    
-    ##      <dbl> <lgl>   <chr> <fct>
-    ##  1 -0.393  FALSE   1     A    
-    ##  2 -0.762  FALSE   2     B    
-    ##  3 -2.76   FALSE   3     C    
-    ##  4 -0.744  FALSE   4     A    
-    ##  5  0.0212 TRUE    5     A    
-    ##  6  1.56   TRUE    6     B    
-    ##  7 -0.251  FALSE   7     C    
-    ##  8 -0.0300 FALSE   8     A    
-    ##  9 -1.30   FALSE   9     B    
-    ## 10  0.121  TRUE    10    C
+    ##        RS logical C     L    
+    ##     <dbl> <lgl>   <chr> <fct>
+    ##  1 -0.438 FALSE   1     A    
+    ##  2 -0.536 FALSE   2     B    
+    ##  3 -0.775 FALSE   3     C    
+    ##  4 -0.493 FALSE   4     A    
+    ##  5 -1.54  FALSE   5     A    
+    ##  6  1.14  TRUE    6     B    
+    ##  7  0.556 TRUE    7     C    
+    ##  8  0.612 TRUE    8     A    
+    ##  9  2.04  TRUE    9     B    
+    ## 10  1.06  TRUE    10    C
 
 ``` r
 # The RS variable has the mean of around 0.307.
